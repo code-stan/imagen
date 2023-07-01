@@ -1,0 +1,129 @@
+:root{
+    /* COLOR PALETTE */
+    --Background-White: #f5f5f5;
+    --Black: #222; /*For texts ans anything that needs darkening*/
+    --Gray: #868686; /*For descriptive or side texts*/
+
+    /* SPACING AND OTHERS... */
+    --doc-padding: clamp(3rem, 8vw, 7rem); /*Body padding / spacing*/
+}
+/* Font for Heading */
+@font-face {
+  font-family: SpaceGrotesk;
+  src: url(../Fonts/Mattone-150.otf);
+}
+
+/* Font for text and etc. */
+@font-face {
+  font-family: Instrument Sans;
+  src: url(../Fonts/InstrumentSans.ttf);
+}
+
+/* =========================
+      |GENERAL STYLINGS|
+========================= */
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+html{
+    font-size: 62.5%;
+}
+body{
+    font-size: 1.6rem; font-family: Instrument Sans, system-ui, -apple-system, sans-serif;
+    background-color: var(--Background-White);
+    color: var(--Black);
+    max-width: 150rem;
+    margin: 0 auto;
+}
+
+a{
+    text-decoration: none;
+    color: initial;
+}
+li{
+    list-style: none;
+}
+.section{
+    padding-inline: 5%;
+}
+button{
+    cursor: pointer;
+    border: none;
+}
+img{
+    max-width: 100%;
+    display: block;
+}
+h1,h2,h3,h4,h5,h6{
+  font-family: SpaceGrotesk, sans-serif;
+}
+
+/* =========================
+      |HEADER SECTION|
+========================= */
+.header{
+  padding-top: 2rem;
+  padding-inline: var(--doc-padding);
+}
+.navbar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.logo, .contribute{
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+.logo p{
+  font-weight: 600;
+}
+:is(.contribute, .logo) img{
+  width: 2.5rem;
+  aspect-ratio: 1/1;
+}
+/* LANDING PAGE STYLES */
+.landing-page{
+  margin-top: 15vh;
+  text-align: center;
+}
+.landing-page__header{
+  font-size: clamp(4.5rem, 8vw, 8rem);
+}
+.landing-page__desc{
+  margin-top: 1rem;
+  color: var(--Gray);
+  font-weight: 500;
+}
+/* =========================
+      |BODY SECTION|
+========================= */
+.body-section{
+  padding-inline: var(--doc-padding);
+}
+
+/* =========================
+      |FOOTER SECTION|
+========================= */
+.footer{
+  padding: 3rem var(--doc-padding);
+  background-color: #ccd3e2;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.footer .logo{
+  font-size: clamp(4rem, 8vw, 7rem);
+  font-weight: 800;
+}
+.footer .logo{
+  -webkit-text-stroke: .2rem var(--Black);
+  color: transparent;
+}
